@@ -76,3 +76,19 @@ console.log(difference<number>(arr1, arr3)); // { removed: [ 2, 4 ], added: [ 33
 console.log(difference<number>(arr1, arr4)); // { removed: [ 2, 4 ], added: [ 5, 44 ] }
 console.log(difference<number>(arr1, arr5)); // { removed: [ 4 ], added: [ 5 ] }
 console.log(difference<number>(arr1, arr6)); // { removed: [ 1, 4 ], added: [ 66, 6, 5 ] }
+
+/* ************************************* */
+/* ****** Multiple generic params ****** */
+/* ************************************* */
+type Logger<FP = string, SP = number, RT = string> = (
+	param1: FP,
+	param2: SP
+) => RT;
+
+const superLogger: Logger<string, number, string> = (name, age) => {
+	return 'Hello World!';
+};
+
+const logger: Logger = (brand, age) => {
+	return brand + age;
+};
