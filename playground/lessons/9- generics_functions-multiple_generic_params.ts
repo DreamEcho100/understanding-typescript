@@ -12,7 +12,7 @@
 // 	}
 // }
 
-// type DifferenceInterface<T> = (
+// type DifferenceType<T> = (
 //   array1: T[],
 //   array2: T[],
 //   options?: {

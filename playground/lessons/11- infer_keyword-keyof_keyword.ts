@@ -20,4 +20,4 @@ interface Person {
 
 type PersonKey = keyof Person;
 
-const personKey: keyof Person = 'grades';
+const personKey: PersonKey = 'grades';
